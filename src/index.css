@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-arena-green: #7CFC00;
+  --color-arena-darkGreen: #5AB800;
+  --color-arena-gold: #DAA520;
+  --color-arena-bg: #080B08;
+  --color-arena-card: #111A11;
+  --color-arena-border: #1f2937;
+  --color-arena-border2: #374151;
+  --color-arena-muted: #9ca3af;
+  --color-arena-text: #f3f4f6;
+  --color-arena-white: #ffffff;
+
+  --font-sans: 'Barlow', sans-serif;
+  --font-condensed: 'Barlow Condensed', sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-pulse-wa: pulse-wa 2s infinite;
+  --animate-blink: blink 1.5s infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+body {
+  background-color: var(--color-arena-bg);
+  color: var(--color-arena-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  background-image: radial-gradient(rgba(124, 252, 0, 0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
